@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function(Request $request) {
+    dd('aaaa');
+});
+
 Route::post('translate', [\App\Http\Controllers\LangController::class, 'translate']);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
